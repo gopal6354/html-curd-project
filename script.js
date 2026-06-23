@@ -62,7 +62,7 @@ document.getElementById("regForm").addEventListener("submit", function (event) {
         document.getElementById("ageEr").innerText = "Age field is required.";
         isValid = false;
     } else if (parseInt(age) <= 0 || parseInt(age) > 110) {
-        document.getElementById("ageEr").innerText = "Please enter a valid numeric age.";
+        document.getElementById("ageEr").innerText = "Age must be a number between 1 and 110.";
         isValid = false;
     }
     if (!checkedGenderElement) {
@@ -178,6 +178,7 @@ function deleteUser(indexToRemoval) {
         console.log(saveTime)
         console.log(saveMainData)
         console.log("Record Delete successfully.")
+        clearFormAndDropdowns()
 
     }
     else {
@@ -344,9 +345,7 @@ countryDropdown.addEventListener('change', function () {
         opt.value = state;
         opt.textContent = state;
         stateDropdown.appendChild(opt);
-    });
-
-
+    }); 
 });
 
 stateDropdown.addEventListener('change', function () {
