@@ -1,0 +1,74 @@
+        body {
+            padding: 40px;
+            background-color: #ffffff;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .col:first-child {
+            flex: 0 0 400px;
+            max-width: 400px;
+            padding: 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #fafafa;
+            text-align: left;/
+        }
+
+
+        .col:last-child {
+            flex: 1;
+            padding: 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #fafafa;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-left: 8px;
+            margin-right: 4px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 6px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .btn-cancel {
+            margin-left: 10px;
+        }

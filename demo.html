@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+
+                <form id="regForm" action="">
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name"  >
+                        <span id="nameEr" class="error"></span>       
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" >
+                        <span id="emailEr" class="error"></span>    
+                    </p>
+                    <p>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" placeholder="Enter your age" >
+                        <span id="ageEr" class="error"></span>
+                    </p>
+                    <p>
+                        <label>Gender:</label><br>
+                        <input type="radio" id="male" name="gender" value="Male" >
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="Female" >
+                        <label for="female">Female</label> <br>
+
+                        <span id="genderEr" class="error"></span>
+                    </p>
+
+                    <p>
+                        <label for="hobby">Hobby:</label><br>
+                        <input type="checkbox" id="reading" name="hobby" value="Reading">
+                        <label for="reading">Reading</label>
+
+                        <input type="checkbox" id="travelling" name="hobby" value="Travelling">
+                        <label for="travelling">Travelling</label>
+
+                        <input type="checkbox" id="sports" name="hobby" value="Sports">
+                        <label for="sports">Sports</label><br>
+                        <span id="checkboxEr" class="error"></span>
+
+                    </p>
+                    <p>
+                        <label for="country">Country:</label>
+                        <select id="country" >
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                        </select>
+                        <span id="countryEr" class="error"></span>
+                    </p>
+                    <p>
+                        <label for="state">State:</label>
+                        <select id="state" >
+                            <option value="">Select State</option>
+                        </select>
+                        <span id="stateEr" class="error"></span>
+                    </p>
+                    <p>
+                        <label for="city">City:</label>
+                        <select id="city" >
+                            <option value="">Select City</option>
+                        </select>
+                        <span id="cityEr" class="error"></span>
+                    </p>
+
+                    <button type="submit" style="margin-top: 10px;" id="save">Save</button>
+                    <!--<button type="reset"></button>-->
+                </form>
+            </div>
+
+
+            <div class="col" id="dataDisplayContainer">
+
+                <div class="mb-3 d-flex gap-5">
+                    <select id="sortInput" class="form-select" style="max-width: 200px;" onchange="searchData()">
+                        <option value="">Sort By Name</option>
+                        <option value="asc">Name: A to Z</option>
+                        <option value="desc">Name: Z to A</option>
+                    </select>
+
+
+                    <input type="text" id="searchInput" class="form-control mb-3 w-50"
+                        placeholder="Search users by name or email..." oninput="searchData()">
+                </div>
+
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Age</th> 
+                            <th scope="col">Gender</th>
+                            <th scope="col">Hobby</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">State</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="demo.js"></script>
+
+</body>
+</html>
+
