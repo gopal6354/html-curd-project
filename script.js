@@ -179,6 +179,7 @@ function deleteUser(indexToRemoval) {
         console.log(saveMainData)
         console.log("Record Delete successfully.")
         clearFormAndDropdowns()
+        document.getElementById("save").innerText = "Save"
 
     }
     else {
